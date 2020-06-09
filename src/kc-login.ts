@@ -1,4 +1,4 @@
-import { getAuthCodeFromLocation } from "./utils";
+import {createRequestBodyForToken, getAuthCodeFromLocation} from './utils';
 
 Cypress.Commands.add("kcLogin", (user: string | UserData) => {
   Cypress.log({ name: "Login" });
@@ -35,8 +35,7 @@ Cypress.Commands.add("kcLogin", (user: string | UserData) => {
         response_type: "code",
         approval_prompt: "auto",
         redirect_uri: Cypress.config("baseUrl"),
-        client_id,
-        client_secret
+        client_id
       }
     })
       .then(response => {
@@ -63,13 +62,7 @@ Cypress.Commands.add("kcLogin", (user: string | UserData) => {
         cy.request({
           method: "post",
           url: `${authBaseUrl}/realms/${realm}/protocol/openid-connect/token`,
-          body: {
-            client_id,
-            client_secret,
-            redirect_uri: Cypress.config("baseUrl"),
-            code,
-            grant_type: "authorization_code"
-          },
+          body: createRequestBodyForToken(client_id, client_secret, Cypress.config("baseUrl"), code),
           form: true,
           followRedirect: false
         }).its("body");
