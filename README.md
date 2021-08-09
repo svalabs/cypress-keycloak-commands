@@ -47,11 +47,31 @@ Setup the Keycloak configuration in `cypress.json` configuration file:
 }
 ```
 
-You can override this settings for some tests using [Enviroment variabiles](https://docs.cypress.io/guides/guides/environment-variables.html).
+You can override this settings for some tests using [Environment variables](https://docs.cypress.io/guides/guides/environment-variables.html).
 
 ### Login commands for E2E Tests
 
-For logging in with Keycloak you must create a [fixture](https://docs.cypress.io/api/commands/fixture.html) containing the user credentials under the directory `cypress/fixtures/users`. For example you can create a file `cypress/fixtures/users/user.json` with this content:
+For logging in with Keycloak there are two possibilities
+#### Using Variables
+
+This is the recommended approach, since it enables the usage of [Environment variables](https://docs.cypress.io/guides/guides/environment-variables.html) for production environments.
+
+```typescript
+describe("Keycloak Login", () => {
+  beforeEach(() => {
+    cy.kcLogout();
+    cy.kcLogin({
+      username: "user",
+      password: "password"
+    });
+    cy.visit("/");
+  });
+});
+```
+
+#### Using fixtures
+
+Create a [fixture](https://docs.cypress.io/api/commands/fixture.html) containing the user credentials under the directory `cypress/fixtures/users`. For example you can create a file `cypress/fixtures/users/user.json` with this content:
 
 ```json
 {
@@ -143,7 +163,7 @@ describe("Keycloak Fake Login", () => {
 
 #### Session Status iframe
 
-At the moment within Cypress is not possible to mock iframe loading and APIs called from an iframe. For this reason, when you use `kcFakeLogin` you have to disable the Session Status iframe, otherwise the Javascript adapter will redirect you to the real Keyacloak instance. You can disable it only when the app is running inside Cypress:
+At the moment within Cypress is not possible to mock iframe loading and APIs called from an iframe. For this reason, when you use `kcFakeLogin` you have to disable the Session Status iframe, otherwise the Javascript adapter will redirect you to the real Keycloak instance. You can disable it only when the app is running inside Cypress:
 
 ```typescript
 const checkLoginIframe = window.Cypress ? false : true;
