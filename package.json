@@ -1,5 +1,5 @@
 {
-  "name": "cypress-keycloak-commands",
+  "name": "@svalabs/cypress-keycloak-commands",
   "version": "0.1.0",
   "description": "Cypress commands for login with Keycloak",
   "main": "dist/index.js",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Fredx87/cypress-keycloak-commands.git"
+    "url": "git+https://github.com/svalabs/cypress-keycloak-commands.git"
   },
   "keywords": [
     "cypress",
@@ -32,9 +32,9 @@
   "author": "Gianluca Frediani <gianluca.frediani@outlook.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Fredx87/cypress-keycloak-commands/issues"
+    "url": "https://github.com/svalabs/cypress-keycloak-commands/issues"
   },
-  "homepage": "https://github.com/Fredx87/cypress-keycloak-commands#readme",
+  "homepage": "https://github.com/svalabs/cypress-keycloak-commands#readme",
   "dependencies": {},
   "devDependencies": {
     "@cypress/webpack-preprocessor": "^4.1.1",
@@ -67,5 +67,8 @@
     "*.{ts,tsx,js}": [
       "eslint --fix"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
