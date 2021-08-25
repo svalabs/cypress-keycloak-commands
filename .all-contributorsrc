@@ -27,6 +27,40 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "rm3l",
+      "name": "Armel Soro",
+      "avatar_url": "https://avatars.githubusercontent.com/u/593208?v=4",
+      "profile": "https://rm3l.org/",
+      "contributions": [
+        "ideas",
+        "code"
+      ]
+    },
+    {
+      "login": "Shuyinsama",
+      "name": "Patrick van Zadel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/650886?v=4",
+      "profile": "http://www.patrickvanzadel.com/",
+      "contributions": [
+        "code",
+        "ideas",
+        "doc",
+        "test"
+      ]
+    },
+    {
+      "login": "davidkaufmann",
+      "name": "David Kaufmann",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12951672?v=4",
+      "profile": "https://github.com/davidkaufmann",
+      "contributions": [
+        "code",
+        "ideas",
+        "doc",
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
