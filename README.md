@@ -2,7 +2,7 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
@@ -215,12 +215,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/Fredx87"><img src="https://avatars2.githubusercontent.com/u/13420283?v=4" width="100px;" alt=""/><br /><sub><b>Gianluca Frediani</b></sub></a><br /><a href="#infra-Fredx87" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#tool-Fredx87" title="Tools">🔧</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=Fredx87" title="Tests">⚠️</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=Fredx87" title="Documentation">📖</a> <a href="#ideas-Fredx87" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=Fredx87" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/groie"><img src="https://avatars3.githubusercontent.com/u/5516998?v=4" width="100px;" alt=""/><br /><sub><b>Ilkka Harmanen</b></sub></a><br /><a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=groie" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Fredx87"><img src="https://avatars2.githubusercontent.com/u/13420283?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gianluca Frediani</b></sub></a><br /><a href="#infra-Fredx87" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#tool-Fredx87" title="Tools">🔧</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=Fredx87" title="Tests">⚠️</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=Fredx87" title="Documentation">📖</a> <a href="#ideas-Fredx87" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=Fredx87" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/groie"><img src="https://avatars3.githubusercontent.com/u/5516998?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ilkka Harmanen</b></sub></a><br /><a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=groie" title="Code">💻</a></td>
+    <td align="center"><a href="https://rm3l.org/"><img src="https://avatars.githubusercontent.com/u/593208?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Armel Soro</b></sub></a><br /><a href="#ideas-rm3l" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=rm3l" title="Code">💻</a></td>
+    <td align="center"><a href="http://www.patrickvanzadel.com/"><img src="https://avatars.githubusercontent.com/u/650886?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Patrick van Zadel</b></sub></a><br /><a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=Shuyinsama" title="Code">💻</a> <a href="#ideas-Shuyinsama" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=Shuyinsama" title="Documentation">📖</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=Shuyinsama" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://github.com/davidkaufmann"><img src="https://avatars.githubusercontent.com/u/12951672?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Kaufmann</b></sub></a><br /><a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=davidkaufmann" title="Code">💻</a> <a href="#ideas-davidkaufmann" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=davidkaufmann" title="Documentation">📖</a> <a href="#maintenance-davidkaufmann" title="Maintenance">🚧</a></td>
   </tr>
 </table>
 
-<!-- markdownlint-enable -->
+<!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
