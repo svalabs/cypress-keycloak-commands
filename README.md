@@ -56,6 +56,7 @@ You can override this settings for some tests using [Environment variables](http
 ### Login commands for E2E Tests
 
 For logging in with Keycloak there are two possibilities
+
 #### Using Variables
 
 This is the recommended approach, since it enables the usage of [Environment variables](https://docs.cypress.io/guides/guides/environment-variables.html) for production environments.
@@ -97,6 +98,20 @@ describe("Keycloak Login", () => {
 ```
 
 You should always perform logout _before_ logging in a user, following the best practice of [cleaning the state in the beforeEach hook](https://docs.cypress.io/guides/references/best-practices.html#Using-after-or-afterEach-hooks).
+
+#### Login Options
+
+Cypress will print the username and password combination in it's log. In case you want to mask the password, use the optional options interface.
+
+```typescript
+describe("Keycloak Login", () => {
+  beforeEach(() => {
+    cy.kcLogout();
+    cy.kcLogin("user", { mask: true });
+    cy.visit("/");
+  });
+});
+```
 
 #### Get user tokens for calling APIs from E2E tests
 
