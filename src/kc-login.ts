@@ -1,8 +1,6 @@
 import {createRequestBodyForToken, getAuthCodeFromLocation} from './utils';
 
-Cypress.Commands.add("kcLogin", (user: string | UserData) => {
-  Cypress.log({ name: "Login" });
-
+Cypress.Commands.add("kcLogin", (user: string | UserData, options?: Options) => {
   let userDataChainable: Cypress.Chainable<UserData>;
   if (typeof user === 'string') {
     userDataChainable = cy.fixture(`users/${user}`);
@@ -21,6 +19,13 @@ Cypress.Commands.add("kcLogin", (user: string | UserData) => {
         "To use kcLogin command, you should define a 'password' field in your User data"
       );
     }
+
+    const passShow = (options && options.mask) ? '*'.repeat(userData.password.length) : userData.password
+
+    Cypress.log({
+      name: "Login",
+      message: [`{ name: ${userData.username}, password: ${passShow}}`]
+    });
 
     const authBaseUrl = Cypress.env("auth_base_url");
     const realm = Cypress.env("auth_realm");
