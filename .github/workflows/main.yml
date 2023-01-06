@@ -8,6 +8,7 @@ jobs:
 
     strategy:
       matrix:
+        node: [12, 14, 16, 18]
         keycloak:
           - "5.0.0"
           - "6.0.1"
@@ -32,7 +33,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: ${{ matrix.node }}
       - name: Build
         run: |
           npm ci
