@@ -1,3 +1,7 @@
+# ⚠️⚠️⚠️ Currently breaks with Keycloak >=18.0.0 ⚠️⚠️⚠️
+
+OpenID [Logout](https://www.keycloak.org/2022/04/keycloak-1800-released#_openid_connect_logout) has been changed and introduces breaking changes. Development and maintenance have been stalled for a while and we need to get everything up to date again. Expect updates incoming very soon.
+
 # cypress-keycloak-commands
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
