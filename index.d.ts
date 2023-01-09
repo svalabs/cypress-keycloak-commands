@@ -25,7 +25,7 @@ interface KcTokens {
 declare namespace Cypress {
   interface Chainable {
     kcLogin(user: string | UserData, options?: Options): Chainable<KcTokens>;
-    kcLogout(): Chainable<void>;
-    kcFakeLogin(user: string | UserData, visitUrl?: string): Chainable<void>;
+    kcLogout(): Chainable<any>;
+    kcFakeLogin(user: string | UserData, visitUrl?: string): Chainable<any>;
   }
 }

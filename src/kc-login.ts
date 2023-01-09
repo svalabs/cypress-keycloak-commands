@@ -62,7 +62,7 @@ Cypress.Commands.add("kcLogin", (user: string | UserData, options?: Options) => 
         });
       })
       .then(response => {
-        const code = getAuthCodeFromLocation(response.headers["location"]);
+        const code = getAuthCodeFromLocation(response.headers["location"].toString());
 
         cy.request({
           method: "post",

@@ -31,17 +31,17 @@ describe("Keycloak Login", () => {
   });
 
   it("should refresh tokens correctly", () => {
-    cy.server();
-    cy.route("post", "**/protocol/openid-connect/token").as("tokenRoute");
-
-    cy.get("#output").should("contain.text", "Init Success (Authenticated)");
+    // cy.server();
+    //  cy.route("post", "**/protocol/openid-connect/token").as("tokenRoute");
+    cy.intercept("POST", "**/protocol/openid-connect/token").as("tokenRoute")
 
     cy.findByText("Refresh Token").click();
+    
+    cy.get("#output").should("contain.text", "Init Success (Authenticated)");
 
     cy.wait("@tokenRoute").then(xhr => {
-      expect(xhr.status).to.be.equal(200);
-
-      const body = xhr.responseBody;
+      expect(xhr.response?.statusCode).to.be.equal(200);
+      const body = xhr.response?.body;
 
       expect(body)
         .to.have.property("access_token")
@@ -91,17 +91,18 @@ describe("Keycloak Login with runtime credentials", () => {
   });
 
   it("should refresh tokens correctly", () => {
-    cy.server();
-    cy.route("post", "**/protocol/openid-connect/token").as("tokenRoute");
-
-    cy.get("#output").should("contain.text", "Init Success (Authenticated)");
+    // cy.server();
+    // cy.route("post", "**/protocol/openid-connect/token").as("tokenRoute");
+    cy.intercept("POST", "**/protocol/openid-connect/token").as("tokenRoute")
 
     cy.findByText("Refresh Token").click();
+    
+    cy.get("#output").should("contain.text", "Init Success (Authenticated)");
 
     cy.wait("@tokenRoute").then(xhr => {
-      expect(xhr.status).to.be.equal(200);
+      expect(xhr.response?.statusCode).to.be.equal(200);
 
-      const body = xhr.responseBody;
+      const body = xhr.response?.body;
 
       expect(body)
         .to.have.property("access_token")
