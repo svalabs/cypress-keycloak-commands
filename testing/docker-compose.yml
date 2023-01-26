@@ -2,13 +2,14 @@ version: "3.7"
 
 services:
   keycloak:
-    image: quay.io/keycloak/keycloak:${KEYCLOAK_VERSION:-10.0.2}
+    image: quay.io/keycloak/keycloak:${KEYCLOAK_VERSION:-20.0.3}
     environment:
       - KEYCLOAK_IMPORT=/tmp/example-realm.json
     volumes:
       - ./example-realm.json:/tmp/example-realm.json
     ports:
       - 8081:8080
+    command: start-dev
 
   frontend:
     image: nginx:1.23.3-alpine-slim
