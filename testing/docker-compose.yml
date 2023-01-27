@@ -2,14 +2,15 @@ version: "3.7"
 
 services:
   keycloak:
-    image: quay.io/keycloak/keycloak:${KEYCLOAK_VERSION:-20.0.3}
+    image: quay.io/keycloak/keycloak:${KEYCLOAK_VERSION:-16.1.1}
     environment:
       - KEYCLOAK_IMPORT=/tmp/example-realm.json
     volumes:
       - ./example-realm.json:/tmp/example-realm.json
+      - ./start-keycloak.sh:/tmp/start-keycloak.sh
     ports:
       - 8081:8080
-    command: start-dev
+    entrypoint: ["/bin/bash", "/tmp/start-keycloak.sh"]
 
   frontend:
     image: nginx:1.23.3-alpine-slim
