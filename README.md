@@ -6,17 +6,13 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-## ⚠️⚠️⚠️ This version only supports Keycloak <= 17 ⚠️⚠️⚠️
-
-Keycloak 18 has better support for logout based on the OpenID Connect RP-Initiated Logout specification. It's a breaking change regarding how it currently works, see [official docs](https://www.keycloak.org/2022/04/keycloak-1800-released#_openid_connect_logout) for more information. We'll be introducing a new major version for Keycloak >= 18. This new version won't be compatible, but still support old Keycloak versions.
-
 Cypress commands for login with [Keycloak](https://www.keycloak.org/).
 
 - Setup Keycloak configuration from Cypress configuration or environment variables
 - Use Fixtures to store users data
 - Returns you the tokens of the logged user for calling backend APIs from your test code
 - Fake login command for integration testing
-- Tested with Keycloak 5-17
+- Tested with Keycloak 5-20
 
 ## Usage
 
@@ -59,7 +55,11 @@ You can override this settings for some tests using [Environment variables](http
 
 ### Login commands for E2E Tests
 
-For logging in with Keycloak there are two possibilities
+#### Cypress best practices
+
+Cypress states in [it's docs](https://docs.cypress.io/guides/references/best-practices#Using-after-or-afterEach-hooks): "State reset should go before each test". We strongly agree with this best practice. Unfortunately or luckily, Keycloak 18 has better support for logout based on the OpenID Connect RP-Initiated Logout specification, [see here](https://www.keycloak.org/2022/04/keycloak-1800-released#_openid_connect_logout), therefore we need to provide the `id_token_hint` when logging out. Hence, `cy.kcLogout()` depends on the token provided by `cy.kcLogin()` and it might be necessary to work with `beforeEach()` and `afterEach()` blocks.
+
+For logging in with Keycloak there are two possibilities:
 
 #### Using Variables
 
@@ -68,12 +68,15 @@ This is the recommended approach, since it enables the usage of [Environment var
 ```typescript
 describe("Keycloak Login", () => {
   beforeEach(() => {
-    cy.kcLogout();
     cy.kcLogin({
       username: "user",
       password: "password"
     });
     cy.visit("/");
+  });
+
+  afterEach(() => {
+    cy.kcLogout();
   });
 });
 ```
@@ -94,9 +97,12 @@ When you have a fixture you can login using the `kcLogin` command, passing the n
 ```typescript
 describe("Keycloak Login", () => {
   beforeEach(() => {
-    cy.kcLogout();
     cy.kcLogin("user");
     cy.visit("/");
+  });
+
+  afterEach(() => {
+    cy.kcLogout();
   });
 });
 ```
@@ -110,9 +116,12 @@ Cypress will print the username and password combination in it's log. In case yo
 ```typescript
 describe("Keycloak Login", () => {
   beforeEach(() => {
-    cy.kcLogout();
     cy.kcLogin("user", { mask: true });
     cy.visit("/");
+  });
+
+  afterEach(() => {
+    cy.kcLogout();
   });
 });
 ```
@@ -124,10 +133,13 @@ If you need to call backend APIs from your tests using the token of the logged u
 ```typescript
 describe("Keycloak Login", () => {
   beforeEach(() => {
-    cy.kcLogout();
     cy.kcLogin("user").as("tokens");
     cy.visit("/");
   });
+
+  afterEach(() => {
+    cy.kcLogout();
+  })
 
   it("should call an API with the token", () => {
     cy.get("@tokens").then(tokens => {
