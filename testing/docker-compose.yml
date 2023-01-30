@@ -2,9 +2,10 @@ version: "3.7"
 
 services:
   keycloak:
-    image: quay.io/keycloak/keycloak:${KEYCLOAK_VERSION:-16.1.1}
+    image: quay.io/keycloak/keycloak:${KEYCLOAK_VERSION:-20.0.3}
     environment:
       - KEYCLOAK_IMPORT=/tmp/example-realm.json
+      - KEYCLOAK_VERSION=${KEYCLOAK_VERSION:-20.0.3}
     volumes:
       - ./example-realm.json:/tmp/example-realm.json
       - ./start-keycloak.sh:/tmp/start-keycloak.sh
