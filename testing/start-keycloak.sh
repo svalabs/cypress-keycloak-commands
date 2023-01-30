@@ -1,5 +1,11 @@
 #!/bin/bash
 
+function run_keycloak_ge_18() {
+  mkdir -p /opt/keycloak/data/import/
+  cp /tmp/example-realm.json /opt/keycloak/data/import/example-realm.json
+  /opt/keycloak/bin/kc.sh start-dev --import-realm --http-relative-path=/auth
+}
+
 function run_keycloak_17() {
   echo "* Importing"
   /opt/keycloak/bin/kc.sh import --file "/tmp/example-realm.json"
@@ -18,5 +24,11 @@ if [ -f /opt/jboss/tools/docker-entrypoint.sh ]; then
   exit 0
 fi
 
-echo "* Keycloak 17* detected!"
-run_keycloak_17
+if [[ $KEYCLOAK_VERSION == 17* ]]; then
+  echo "* Keycloak 17* detected!"
+  run_keycloak_17
+  exit 0
+fi
+
+echo "* Keycloak >= 18 detected!"
+run_keycloak_ge_18
