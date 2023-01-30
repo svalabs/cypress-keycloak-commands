@@ -1,12 +1,14 @@
-# ⚠️⚠️⚠️ Currently breaks with Keycloak >=18.0.0 ⚠️⚠️⚠️
-
-OpenID [Logout](https://www.keycloak.org/2022/04/keycloak-1800-released#_openid_connect_logout) has been changed and introduces breaking changes. Development and maintenance have been stalled for a while and we need to get everything up to date again. Expect updates incoming very soon.
-
 # cypress-keycloak-commands
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+
+## ⚠️⚠️⚠️ This version only supports Keycloak <= 17 ⚠️⚠️⚠️
+
+Keycloak 18 has better support for logout based on the OpenID Connect RP-Initiated Logout specification. It's a breaking change regarding how it currently works, see [official docs](https://www.keycloak.org/2022/04/keycloak-1800-released#_openid_connect_logout) for more information. We'll be introducing a new major version for Keycloak >= 18. This new version won't be compatible, but still support old Keycloak versions.
 
 Cypress commands for login with [Keycloak](https://www.keycloak.org/).
 
@@ -14,7 +16,7 @@ Cypress commands for login with [Keycloak](https://www.keycloak.org/).
 - Use Fixtures to store users data
 - Returns you the tokens of the logged user for calling backend APIs from your test code
 - Fake login command for integration testing
-- Tested with Keycloak 4.8, 5, 6, 7, 8, 9 and 10
+- Tested with Keycloak 5-17
 
 ## Usage
 
