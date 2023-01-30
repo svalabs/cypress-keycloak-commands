@@ -61,6 +61,15 @@
         "doc",
         "maintenance"
       ]
+    },
+    {
+      "login": "Bloeckchengrafik",
+      "name": "Christian Bergschneider",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37768199?v=4",
+      "profile": "https://bloeckchengrafik.github.io/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,

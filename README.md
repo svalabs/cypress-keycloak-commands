@@ -5,9 +5,7 @@ OpenID [Logout](https://www.keycloak.org/2022/04/keycloak-1800-released#_openid_
 # cypress-keycloak-commands
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
-
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Cypress commands for login with [Keycloak](https://www.keycloak.org/).
@@ -218,13 +216,16 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
-  <tr>
-    <td align="center"><a href="https://github.com/Fredx87"><img src="https://avatars2.githubusercontent.com/u/13420283?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gianluca Frediani</b></sub></a><br /><a href="#infra-Fredx87" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#tool-Fredx87" title="Tools">🔧</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=Fredx87" title="Tests">⚠️</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=Fredx87" title="Documentation">📖</a> <a href="#ideas-Fredx87" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=Fredx87" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/groie"><img src="https://avatars3.githubusercontent.com/u/5516998?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ilkka Harmanen</b></sub></a><br /><a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=groie" title="Code">💻</a></td>
-    <td align="center"><a href="https://rm3l.org/"><img src="https://avatars.githubusercontent.com/u/593208?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Armel Soro</b></sub></a><br /><a href="#ideas-rm3l" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=rm3l" title="Code">💻</a></td>
-    <td align="center"><a href="http://www.patrickvanzadel.com/"><img src="https://avatars.githubusercontent.com/u/650886?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Patrick van Zadel</b></sub></a><br /><a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=Shuyinsama" title="Code">💻</a> <a href="#ideas-Shuyinsama" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=Shuyinsama" title="Documentation">📖</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=Shuyinsama" title="Tests">⚠️</a></td>
-    <td align="center"><a href="https://github.com/davidkaufmann"><img src="https://avatars.githubusercontent.com/u/12951672?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Kaufmann</b></sub></a><br /><a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=davidkaufmann" title="Code">💻</a> <a href="#ideas-davidkaufmann" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=davidkaufmann" title="Documentation">📖</a> <a href="#maintenance-davidkaufmann" title="Maintenance">🚧</a></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Fredx87"><img src="https://avatars2.githubusercontent.com/u/13420283?v=4?s=100" width="100px;" alt="Gianluca Frediani"/><br /><sub><b>Gianluca Frediani</b></sub></a><br /><a href="#infra-Fredx87" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#tool-Fredx87" title="Tools">🔧</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=Fredx87" title="Tests">⚠️</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=Fredx87" title="Documentation">📖</a> <a href="#ideas-Fredx87" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=Fredx87" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/groie"><img src="https://avatars3.githubusercontent.com/u/5516998?v=4?s=100" width="100px;" alt="Ilkka Harmanen"/><br /><sub><b>Ilkka Harmanen</b></sub></a><br /><a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=groie" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://rm3l.org/"><img src="https://avatars.githubusercontent.com/u/593208?v=4?s=100" width="100px;" alt="Armel Soro"/><br /><sub><b>Armel Soro</b></sub></a><br /><a href="#ideas-rm3l" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=rm3l" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.patrickvanzadel.com/"><img src="https://avatars.githubusercontent.com/u/650886?v=4?s=100" width="100px;" alt="Patrick van Zadel"/><br /><sub><b>Patrick van Zadel</b></sub></a><br /><a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=Shuyinsama" title="Code">💻</a> <a href="#ideas-Shuyinsama" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=Shuyinsama" title="Documentation">📖</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=Shuyinsama" title="Tests">⚠️</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/davidkaufmann"><img src="https://avatars.githubusercontent.com/u/12951672?v=4?s=100" width="100px;" alt="David Kaufmann"/><br /><sub><b>David Kaufmann</b></sub></a><br /><a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=davidkaufmann" title="Code">💻</a> <a href="#ideas-davidkaufmann" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=davidkaufmann" title="Documentation">📖</a> <a href="#maintenance-davidkaufmann" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://bloeckchengrafik.github.io/"><img src="https://avatars.githubusercontent.com/u/37768199?v=4?s=100" width="100px;" alt="Christian Bergschneider"/><br /><sub><b>Christian Bergschneider</b></sub></a><br /><a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=Bloeckchengrafik" title="Code">💻</a></td>
+    </tr>
+  </tbody>
 </table>
 
 <!-- markdownlint-restore -->
