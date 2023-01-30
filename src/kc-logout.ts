@@ -3,7 +3,7 @@ Cypress.Commands.add("kcLogout", () => {
   const authBaseUrl = Cypress.env("auth_base_url");
   const realm = Cypress.env("auth_realm");
 
-  return cy.request({
+  cy.request({
     url: `${authBaseUrl}/realms/${realm}/protocol/openid-connect/logout`
   });
 });

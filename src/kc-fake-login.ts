@@ -10,7 +10,7 @@ Cypress.Commands.add("kcFakeLogin", (user: string | UserData, visitUrl = "") => 
     userDataChainable = cy.wrap(user, {log: false});
   }
 
-  return userDataChainable.then((userData: UserData) => {
+  userDataChainable.then((userData: UserData) => {
     if (!userData.fakeLogin) {
       throw new Error(
         "To use kcFakeLogin command you should define fakeLogin data in fixture"
