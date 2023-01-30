@@ -15,7 +15,8 @@
     "lint": "eslint . --cache --fix --ext .ts,.tsx,.js",
     "format": "prettier --write \"**/*.{js,ts,css,md,yml}\"",
     "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -55,11 +56,6 @@
     "typescript": "^4.9.4",
     "wait-on": "^7.0.1",
     "webpack": "^5.75.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.{css,md,json,yml}": [
