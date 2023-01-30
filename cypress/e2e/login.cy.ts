@@ -3,10 +3,11 @@
 
 describe("Keycloak Login", () => {
   beforeEach(() => {
-    cy.kcLogout();
     cy.kcLogin("user").as("tokens");
     cy.visit("");
   });
+
+  afterEach(() => cy.kcLogout());
 
   it("should show user as authenticated", () => {
     cy.get("#output").should("contain.text", "Init Success (Authenticated)");
@@ -60,13 +61,14 @@ describe("Keycloak Login", () => {
 
 describe("Keycloak Login with runtime credentials", () => {
   beforeEach(() => {
-    cy.kcLogout();
     cy.kcLogin({
       username: "user",
 	    password: "password"
     }).as("tokens");
     cy.visit("");
   });
+
+  afterEach(() => cy.kcLogout());
 
   it("should show user as authenticated", () => {
     cy.get("#output").should("contain.text", "Init Success (Authenticated)");
