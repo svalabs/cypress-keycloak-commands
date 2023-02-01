@@ -107,8 +107,6 @@ describe("Keycloak Login", () => {
 });
 ```
 
-You should always perform logout _before_ logging in a user, following the best practice of [cleaning the state in the beforeEach hook](https://docs.cypress.io/guides/references/best-practices.html#Using-after-or-afterEach-hooks).
-
 #### Login Options
 
 Cypress will print the username and password combination in it's log. In case you want to mask the password, use the optional options interface.
